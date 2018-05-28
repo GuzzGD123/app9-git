@@ -52,9 +52,9 @@ $(document).ready(function(e) {
 		function onSuccess(position){
 
 
-		$('#latitud').html(position.latitude);
-		$('#longitud').html(position.longitude);
-		$('#altitud').html(position.altitude);
+		$('#latitud').html(position.coords.latitude);
+		$('#longitud').html(position.coords.longitude);
+		$('#altitud').html(position.coords.altitude);
 		$('#accuracy').html(position.coords.accuracy);
 		$('#aaccuracy').html(position.coords.altitudeAccuracy);
 		$('#headingg').html(position.coords.heading);
