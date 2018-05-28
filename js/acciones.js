@@ -23,8 +23,8 @@ $(document).ready(function(e) {
 				maximumAge:3600000
 			}
 			
-			var watchID = navigator.geolocation.getCurrentPosition(onSucces,onError,options);
-			function onSucess(position) {
+			var watchID = navigator.geolocation.getCurrentPosition(onSucces, onError, options);
+			function onSucess(position){
 				
 				alert('Latitude:'		+position.coords.latitude		+'\n'+
 				'Longitude:'		+position.coords.longitude		+'\n'+
@@ -40,6 +40,7 @@ $(document).ready(function(e) {
 			}
 		}
 		
+		
 	function watchPosition(){
 		var options={
 			maximumAge:3600000,
@@ -48,7 +49,8 @@ $(document).ready(function(e) {
 		}
 		
 		var watchID=navigator.geolocation.watchPosition(onSucess,onError,options);
-		function onSucess(position){
+		function onSuccess(position){
+
 
 		$('#latitud').html(position.latitude);
 		$('#longitud').html(position.longitude);
